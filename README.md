@@ -1,5 +1,6 @@
 ## Spark Basics
 This repo contains basic Spark code examples to learn Apache Spark. The source codes of the following contents are included in this project.
+### Low Level RDD
 1. **WordCount**
    * The simple project which counts the words.
 2. **CreateRDD**
@@ -50,3 +51,4 @@ This repo contains basic Spark code examples to learn Apache Spark. The source c
      * _reduce_
        * It produces a result by applying the function given as a parameter on the RDD elements in parallel.
        * {1,2,2,2} --> reduce((x,y) => x+y) --> Int = 57
+### PairRDD
