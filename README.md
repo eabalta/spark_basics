@@ -52,7 +52,7 @@ This repo contains basic Spark code examples to learn Apache Spark. The source c
        * It produces a result by applying the function given as a parameter on the RDD elements in parallel.
        >{1,2,2,2} --> reduce((x,y) => x+y) --> Int = 57
 
-### PairRDD
+### Low Level PairRDD
 * Generally use in aggregation operations
 * Sometimes need preprocessing RDD to be PairRDD
 * Main structure is Tuple.
@@ -97,6 +97,18 @@ This repo contains basic Spark code examples to learn Apache Spark. The source c
        >RDD1.rightOuterJoin(RDD2) --> {((3,(Some(4),9)),(3,(Some(6),9)))}
      * leftOuterJoin
        >RDD1.leftOuterJoin(RDD2) --> {(1,(2,None)),((3,(4,Some(9))),(3,(6,Some(9))))}
-2. 
 
-   
+### Low Level Distributed Shared Variables
+* Distributed Shared Variables are Broadcast Variables and Accumulators.
+* Broadcast Variables are immutable, Accumulators are muteable.
+* Accumulators are used to add up tasks' results. For example, counter.
+* Broadcast Variables are used to create lookup table on data merging for decrease shuffle cost.
+* **Broadcast Variables**
+  * In the most used scenario is Lookup Table
+  * It is always accessible in the Executor.
+  * It created using _sc.broadcast()_
+  * It accessed by _.value()_
+* **Accumulators**
+  * It is a variable used by sharing to reach aggregation results throughout the cluster.
+  * The same job is handled by many tasks in many partitions, and a common variable is needed for the results.
+  * The accumulator serves to update this variable between so many jobs and deliver this variable to the driver server in a fault-tolerant manner.
