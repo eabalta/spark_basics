@@ -91,6 +91,7 @@ This repo contains basic Spark code examples to learn Apache Spark. The source c
        RDD2 = {(3,9)}\
        RDD1.subtractByKey(RDD2) --> {(1,2)}
      * join
+       * Must contain Primary Key - Foreign Key relation.
        >RDD1.join(RDD2) --> {((3,(4,9)),(3,(6,9)))}
      * rightOuterJoin
        >RDD1.rightOuterJoin(RDD2) --> {((3,(Some(4),9)),(3,(Some(6),9)))}
