@@ -18,7 +18,7 @@ object Map {
 
     println("Pair RDD map() Example\t=>\n")
 
-    val retailRDD = sc.textFile("./src/main/scala/LowLevelPairRDD/OnlineRetail.csv").filter(!_.contains("UnitPrice"))
+    val retailRDD = sc.textFile("./src/main/scala/OnlineRetail.csv").filter(!_.contains("UnitPrice"))
 
     // find the sum of the charges for canceled sales
 

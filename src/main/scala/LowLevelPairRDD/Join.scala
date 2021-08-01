@@ -18,11 +18,11 @@ object Join {
 
     val sc = spark.sparkContext
 
-    val order_items_rdd = sc.textFile("./src/main/scala/LowLevelPairRDD/order_items.csv").filter(!_.contains("orderItemName"))
+    val order_items_rdd = sc.textFile("./src/main/scala/order_items.csv").filter(!_.contains("orderItemName"))
     println("\norder_items.csv")
     order_items_rdd.take(5).foreach(println)
 
-    val products_rdd = sc.textFile("./src/main/scala/LowLevelPairRDD/products.csv").filter(!_.contains("productId"))
+    val products_rdd = sc.textFile("./src/main/scala/products.csv").filter(!_.contains("productId"))
     println("\nproducts.csv")
     products_rdd.take(5).foreach(println)
 

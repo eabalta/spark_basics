@@ -20,7 +20,7 @@ object Filter {
 
     println("Pair RDD filter() Example\t=>\n")
 
-    val retailRDDWithHeader = sc.textFile("./src/main/scala/LowLevelPairRDD/OnlineRetail.csv")
+    val retailRDDWithHeader = sc.textFile("./src/main/scala/OnlineRetail.csv")
     println("OnlineRetail.csv")
     retailRDDWithHeader.take(5).foreach(println)
 

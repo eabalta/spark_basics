@@ -18,7 +18,7 @@ object PairRDDOps {
 
     // Find average salary foreach job
 
-    val rdd = sc.textFile("./src/main/scala/LowLevelPairRDD/simple_data.csv").filter(!_.contains("sirano"))
+    val rdd = sc.textFile("./src/main/scala/simple_data.csv").filter(!_.contains("sirano"))
     println("Dataset")
     rdd.take(5).foreach(println)
 
