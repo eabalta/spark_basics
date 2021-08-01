@@ -3,7 +3,7 @@ package PairRDD
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
 
-object PairRDDBasicTransformations {
+object Filter {
   def main(args: Array[String]): Unit = {
     // Log Config
     Logger.getLogger("org").setLevel(Level.ERROR)
@@ -52,3 +52,39 @@ object PairRDDBasicTransformations {
 
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
