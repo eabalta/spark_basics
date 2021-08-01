@@ -1,4 +1,4 @@
-package PairRDD
+package LowLevelPairRDD
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
 object Map {
@@ -18,7 +18,7 @@ object Map {
 
     println("Pair RDD map() Example\t=>\n")
 
-    val retailRDD = sc.textFile("./src/main/scala/PairRDD/OnlineRetail.csv").filter(!_.contains("UnitPrice"))
+    val retailRDD = sc.textFile("./src/main/scala/LowLevelPairRDD/OnlineRetail.csv").filter(!_.contains("UnitPrice"))
 
     // find the sum of the charges for canceled sales
 
