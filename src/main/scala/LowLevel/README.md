@@ -1,5 +1,5 @@
 ## Low Level
-This repo contains basic Spark code examples to learn Apache Spark. The source codes of the following contents are included in this project.
+This package contains basic information and code examples about Low Level Spark API. The source codes of the following contents are included in this project.
 ### RDD
 1. **WordCount**
    * The simple project which counts the words.
