@@ -40,3 +40,18 @@ Spark Structured API consists of 3 different structures. These are **DataFrame, 
 >* It is not suitable for low time queries, although suitable for big data in acceptable time.
 >* It using for OLAP (Online analytical processing) not OLTP (Online transaction processing).
 
+### Schema
+
+---
+
+> * It is a data structure which includes column names and column data types.
+> * Structured API includes schema but unstructured not.
+> * User can define schema oneself.
+>> schema = StructType([\
+StructField("no",IntegerType(),True),\
+StructField("name",StringType(),True),\
+StructField("job",StringType(),True),\
+])\
+df = spark.CreateDataFrame(rdd,schema)
+>* Spark can create the schema on its own while reading data.
+> > df = spark.read.format("csv").**option("inferSchema","true")**.load("path/file.csv")
