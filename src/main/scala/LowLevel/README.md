@@ -1,6 +1,6 @@
-## Spark Basics
+## Low Level
 This repo contains basic Spark code examples to learn Apache Spark. The source codes of the following contents are included in this project.
-### Low Level RDD
+### RDD
 1. **WordCount**
    * The simple project which counts the words.
 2. **CreateRDD**
@@ -52,7 +52,7 @@ This repo contains basic Spark code examples to learn Apache Spark. The source c
        * It produces a result by applying the function given as a parameter on the RDD elements in parallel.
        >{1,2,2,2} --> reduce((x,y) => x+y) --> Int = 57
 
-### Low Level PairRDD
+### PairRDD
 * Generally use in aggregation operations
 * Sometimes need preprocessing RDD to be PairRDD
 * Main structure is Tuple.
@@ -98,7 +98,7 @@ This repo contains basic Spark code examples to learn Apache Spark. The source c
      * leftOuterJoin
        >RDD1.leftOuterJoin(RDD2) --> {(1,(2,None)),((3,(4,Some(9))),(3,(6,Some(9))))}
 
-### Low Level Distributed Shared Variables
+### Distributed Shared Variables
 * Distributed Shared Variables are Broadcast Variables and Accumulators.
 * Broadcast Variables are immutable, Accumulators are muteable.
 * Accumulators are used to add up tasks' results. For example, counter.
