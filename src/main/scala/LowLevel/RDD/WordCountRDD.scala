@@ -1,4 +1,4 @@
-package LowLevelRDD
+package LowLevel.RDD
 
 import org.apache.log4j.{Level,Logger}
 import org.apache.spark.sql.SparkSession
@@ -39,7 +39,7 @@ object WordCountRDD {
     println()
 
     // Empty String durumunu cozmek icin de filter metoduyla sadece dolu stringleri aliyoruz.
-    words = words.filter(!_.isEmpty)
+    words = words.filter(_.nonEmpty)
 
     // Kelimelerin sayisini tutabilmek icin map fonksiyonuyla her kelimenin bir de sayisini yanina sayi degeri ekliyoruz.
     var wordsCount = words.map((_,1)).reduceByKey(_ + _)
@@ -49,7 +49,7 @@ object WordCountRDD {
 
     var finalCount = wordsCount.map(x => (x._2,x._1))
     println("En Cok Tekrar Eden Kelimeler ;")
-    finalCount.sortByKey(false).take(15).foreach(println)
+    finalCount.sortByKey(ascending = false).take(15).foreach(println)
 
   }
 }

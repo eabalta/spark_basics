@@ -1,4 +1,4 @@
-package LowLevelRDD
+package LowLevel.RDD
 
 import org.apache.log4j.{Level,Logger}
 import org.apache.spark.sql.SparkSession
@@ -18,8 +18,8 @@ object RDDBasicTransformations {
 
     val sc = spark.sparkContext
 
-    // One RDD
-    println("One RDD Transmissions\t=>")
+    // One LowLevel.RDD
+    println("One LowLevel.RDD Transmissions\t=>")
 
     val oneRDD = sc.range(0L,15L,3)
 
@@ -48,8 +48,8 @@ object RDDBasicTransformations {
     strRDD.distinct().take(5).foreach(println)
     println()
 
-    // Two RDD
-    println("Two RDD Transmissions\t=>")
+    // Two LowLevel.RDD
+    println("Two LowLevel.RDD Transmissions\t=>")
 
     val twoRDD = sc.range(0L,18L,2)
 

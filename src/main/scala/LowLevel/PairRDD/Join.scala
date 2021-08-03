@@ -1,4 +1,4 @@
-package LowLevelPairRDD
+package LowLevel.PairRDD
 
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
@@ -34,11 +34,11 @@ object Join {
       val orderItemSubTotal = line.split(",")(4)
       val orderItemProductPrice = line.split(",")(5)
 
-      // orderItemProductId anahtar,  kalanlar değer olacak şekilde PairRDD döndürme
+      // orderItemProductId anahtar,  kalanlar değer olacak şekilde LowLevel.PairRDD döndürme
       (orderItemProductId, (orderItemName, orderItemOrderId, orderItemQuantity,orderItemSubTotal, orderItemProductPrice))
     })
 
-    println("\norder_items.csv -> PairRDD")
+    println("\norder_items.csv -> LowLevel.PairRDD")
     order_items_pair_rdd.take(5).foreach(println)
 
     val products_pair_rdd = products_rdd.map( line => {
@@ -52,7 +52,7 @@ object Join {
       (productId, (productCategoryId, productName, productDescription, productPrice, productImage))
     })
 
-    println("\nproducts.csv -> PairRDD")
+    println("\nproducts.csv -> LowLevel.PairRDD")
     products_pair_rdd.take(5).foreach(println)
 
 

@@ -1,4 +1,4 @@
-package LowLevelPairRDD
+package LowLevel.PairRDD
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
 object Map {
@@ -16,7 +16,7 @@ object Map {
 
     val sc = spark.sparkContext
 
-    println("Pair RDD map() Example\t=>\n")
+    println("Pair LowLevel.RDD map() Example\t=>\n")
 
     val retailRDD = sc.textFile("./src/main/scala/OnlineRetail.csv").filter(!_.contains("UnitPrice"))
 

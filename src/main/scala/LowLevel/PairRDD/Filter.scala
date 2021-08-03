@@ -1,4 +1,4 @@
-package LowLevelPairRDD
+package LowLevel.PairRDD
 
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.sql.SparkSession
@@ -18,7 +18,7 @@ object Filter {
 
     val sc = spark.sparkContext
 
-    println("Pair RDD filter() Example\t=>\n")
+    println("Pair LowLevel.RDD filter() Example\t=>\n")
 
     val retailRDDWithHeader = sc.textFile("./src/main/scala/OnlineRetail.csv")
     println("OnlineRetail.csv")
