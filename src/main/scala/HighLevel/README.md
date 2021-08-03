@@ -26,3 +26,9 @@ ___
 >* DataFrame is UntypedAPI so Spark controls types in runtime.
 >* Spark DataFrame has similarly concept with Pandas DataFrame.
 >* Creating Spark DataFrame from Pandas DataFrame is easy.
+
+>#### Spark Dataset
+>* It is Type-Safe so its special to Scala and Java. Its not include in R and Python because they work with dynamic typed. 
+>* User can specify data type with case class. 
+>* Spark controls types during compile so we are less likely to encounter errors during runtime.
+
