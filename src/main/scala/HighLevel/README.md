@@ -55,3 +55,16 @@ StructField("job",StringType(),True),\
 df = spark.CreateDataFrame(rdd,schema)
 >* Spark can create the schema on its own while reading data.
 > > df = spark.read.format("csv").**option("inferSchema","true")**.load("path/file.csv")
+
+
+### Spark Plans, Transformation & Action, Lazy Evaluation
+
+---
+
+>Spark Plans Summary;
+> 
+>![img.png](img.png)
+
+>**Transformation** processes determine relationships and organise the data.\
+>**Lazy Evaluation** means logic of not taking action immediately and make plan primarily.\
+>**Action** evaluate processes and create results.
