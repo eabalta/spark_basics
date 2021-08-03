@@ -17,8 +17,8 @@ ___
 
 
 ### Spark Structured API
-Spark Structured API consists of 3 different structures. These are **DataFrame, Dataset, SparkSQL**.
 ___
+Spark Structured API consists of 3 different structures. These are **DataFrame, Dataset, SparkSQL**.
 
 >#### Spark DataFrame
 >* DataFrame is the most widely used structured API.
@@ -31,4 +31,12 @@ ___
 >* It is Type-Safe so its special to Scala and Java. Its not include in R and Python because they work with dynamic typed. 
 >* User can specify data type with case class. 
 >* Spark controls types during compile so we are less likely to encounter errors during runtime.
+
+>#### Spark SQL Tables & Views
+>* We can manipulate DataFrames and Datasets with SQL queries.
+>* Operations with SQL query work with DataFrame and Dataset API. For this reason, the same code is running in the background.
+>* Compatible with ANSI SQL:2003
+>* It is good alternative for Hive MapReduce and Tez.
+>* It is not suitable for low time queries, although suitable for big data in acceptable time.
+>* It using for OLAP (Online analytical processing) not OLTP (Online transaction processing).
 
