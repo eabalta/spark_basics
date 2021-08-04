@@ -8,7 +8,7 @@ object DataFrameWordCount {
 
     val spark = SparkSession.builder()
       .master("local[6]")
-      .appName("IntroductionToDataFrame")
+      .appName("WordCount")
       .config("spark.driver.memory","4g")
       .config("spark.executor.memory","8g")
       .getOrCreate()
